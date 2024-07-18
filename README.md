@@ -1,7 +1,7 @@
 ### Proxy Finder:
 
 $$
-\text{Objective function} = \arg \max\limits_{c \in C} \left( (1 - \alpha) R^2_{fv \sim c} - \alpha \frac{1}{|O|} \sum_{o \in O} R^2_{o \sim c} \right)
+\text{Objective function} = \arg \max\limits_{c \in C} \left( (1 - \alpha) R^2_{\hat{t} \sim c} - \alpha \frac{1}{|O|} \sum_{o \in O} R^2_{o \sim c} \right)
 $$
 
 ### Summary of the Proxy Finder Algorithm  
@@ -15,10 +15,10 @@ To identify the *k* best proxy variables for a target variable from a dataset th
  - **df2:** The dataset we want to find a proxy for the target variable in.
  - **Target:** The target variable in df1 that we would like to find a proxy for in df2.
  - **Predictors:** The variables we will use to predict the target in df1 and df2. These variables must exist in both df1 and df2.
- - **Orthogonal Variables** The control variables that we would like the proxy to be uncorrelated with. Optionally, this can include all predictor variables to reduce direct influence of predictor variable variance on the predicted target variable.
+ - **Orthogonal Variables (O)** The control variables that we would like the proxy to be uncorrelated with. Optionally, this can include all predictor variables to reduce direct influence of predictor variable variance on the predicted target variable.
  - **k**: (optional) Number of proxies for the algorithm to recommend. In unspecified, defaults to 1.
- - **Candidates:** (optional) All candidate proxy variables we'd like to check. If unspecified, defaults to all numerical variables in df2.
- - $\mathbf{\alpha}$: (optional) Orthogonality weight (between 0,1 inclusive). Defaults to 0.65.
+ - **Candidates (C):** (optional) All candidate proxy variables we'd like to check. If unspecified, defaults to all numerical variables in df2.
+ - **Orthogonality Weight ($\alpha$):** (optional) Orthogonality weight (between 0,1 inclusive). Defaults to 0.65.
    
 #### Steps:
 ##### 1. Data Preprocessing:  
@@ -29,7 +29,7 @@ To identify the *k* best proxy variables for a target variable from a dataset th
  - Predict Item: Use the learned weights to predict the focal variable in df2.
 ##### 3. Proxy Selection:
  - **3.a: Initial Proxy Analysis:** For each variable that is a candidate proxy in df2:
-   - Perform a regression analysis (OLS) to predict the target using the candidate proxy.
+   - Perform a regression analysis (OLS) regressing the predicted target column ($\hat{t}$) on the candidate proxy.
    - Store the R-squared value of the regression model.
  - **3.b: Orthogonality Constraint:** For each candidate proxy:
    - Calculate the R-squared value for the regression of each orthogonal variable on the candidate proxy.
