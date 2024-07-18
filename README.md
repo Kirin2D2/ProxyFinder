@@ -1,6 +1,8 @@
 ### Proxy Finder:
 
+$$
 \text{Objective function} = \arg \max\limits_{c \in C} \left( (1 - \alpha) R^2_{fv \sim c} - \alpha \frac{1}{|O|} \sum_{o \in O} R^2_{o \sim c} \right)
+$$
 
 ### Summary of the Proxy Finder Algorithm  
 
