@@ -4,6 +4,11 @@ $$
 \text{Objective function} = \arg \max\limits_{c \in C} \left( (1 - \alpha) R^2_{\hat{t} \sim c} - \alpha \frac{1}{|O|} \sum_{o \in O} R^2_{o \sim c} \right)
 $$
 
+$$
+= \arg \max\limits_{c \in C} \left( (1 - \alpha) \left( 1 - \frac{\sum_{i=1}^{n} (t_i - \hat{t}_i)^2}{\sum_{i=1}^{n} (t_i - \bar{t})^2} \right) - \alpha \frac{1}{|O|} \sum_{o \in O} \left( 1 - \frac{\sum_{i=1}^{n} (o_i - \hat{o}_i)^2}{\sum_{i=1}^{n} (o_i - \bar{o})^2} \right) \right)
+$$
+
+
 ### Summary of the Proxy Finder Algorithm  
 
 #### Objective:  
