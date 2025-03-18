@@ -5,7 +5,7 @@ $$
 $$
  
 $$
-= \arg \max\limits_{c \in C} \left( (1 - \alpha) \left( 1 - \frac{\sum_{i=1}^{n} (t_i - \hat{t}_i)^2}{\sum_{i=1}^{n} (t_i - \bar{t})^2} \right) - \alpha \frac{1}{|O|} \sum_{o \in O} \left( 1 - \frac{\sum_{i=1}^{n} (o_i - \hat{o}_i)^2}{\sum_{i=1}^{n} (o_i - \bar{o})^2} \right) \right)
+= \text{argmax}_{c \in C} \left( (1 - \alpha) \left( 1 - \frac{\sum_{i=1}^{n} (t_i - \hat{t}_i)^2}{\sum_{i=1}^{n} (t_i - \bar{t})^2} \right) - \alpha \frac{1}{|O|} \sum_{o \in O} \left( 1 - \frac{\sum_{i=1}^{n} (o_i - \hat{o}_i)^2}{\sum_{i=1}^{n} (o_i - \bar{o})^2} \right) \right)
 $$
 
 
