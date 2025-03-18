@@ -45,5 +45,5 @@ To identify the *k* best proxy variables for a target variable from a dataset th
  - **Proxy Scores:** Print Proxy Scores.
 
 ### Authors of the code
-- [Kirin Danek](kirin2d2.github.io) - kd9132@princeton.edu, Undergraduate Student, Princeton University
+- [Kirin Danek](https://kirin2d2.github.io) - kd9132@princeton.edu, Undergraduate Student, Princeton University
 - James Daniels - jamesdaniels@princeton.edu, Undergraduate Student, Princeton University
