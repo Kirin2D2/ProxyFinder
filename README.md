@@ -1,4 +1,7 @@
-### Proxy Finder:
+# Proxy Finder: Proxy Selection in Divergent Data Sets by Methodological Prediction and Correlation Reduction (MPSA 2025)
+
+This repository contains code for the paper:
+*ProxyFinder: Proxy Selection in Divergent Data Sets by Methodological Prediction and Correlation Reduction*, Kirin Danek, James Daniels, Howard Lavine. 2025.
 
 $$
 \text{Objective function} = \arg \max\limits_{c \in C} \left( (1 - \alpha) R^2_{\hat{t} \sim c} - \alpha \frac{1}{|O|} \sum_{o \in O} R^2_{o \sim c} \right)
@@ -40,3 +43,7 @@ To identify the *k* best proxy variables for a target variable from a dataset th
 #### Output:
  - **Top Proxies:** Return a list of the top candidate proxies that best predict the focal variable while being orthogonal to the specified control variables.
  - **Proxy Scores:** Print Proxy Scores.
+
+### Authors of the code
+- [Kirin Danek](kirin2d2.github.io) - kd9132@princeton.edu, Undergraduate Student, Princeton University
+- James Daniels - jamesdaniels@princeton.edu, Undergraduate Student, Princeton University
