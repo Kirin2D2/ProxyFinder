@@ -1,0 +1,124 @@
+2.CSV
+Orthogonalization: Basic
+Train, Test: Yougov, Yougov
+Target:  ‘christian_nationalism’
+Target Correlation: 0.90
+Orth_weights: [0, 0.55, 0.56, … 0.75]
+Neural net: torch
+Monte carlo iterations: 50 each
+
+4.CSV
+Orthogonalization: Pseudo Res
+Train, Test: Yougov, Yougov
+Target:  ‘christian_nationalism’
+Target Correlation: 0.80
+Orth_weights: [0, 0.1, 0.2, 0.25, 0.3, 0.4, 0.45, 0.5, 0.55, 0.6, 0.7, 0.8, 0.9, 1.1, 1.5, 2]
+Neural net: torch
+Monte carlo iterations: 50 each
+
+6.CSV
+Orthogonalization: Basic
+Train, Test: Yougov, Yougov
+Target:  ‘christian_nationalism’
+Target Correlation: 0.90
+Orth_weights: [0, 0.55, 0.56, … 0.75]
+Neural net: GAIN
+Monte carlo iterations: 50 each
+
+7.CSV
+Orthogonalization: Basic
+Train, Test: Yougov, ANES
+Target:  pff_jb
+Orth_weights: [0, 0.55, 0.56, … 0.75]
+Neural net: GAIN
+Monte carlo iterations: 50 each
+target = 'pff_jb'  # The target variable in the training set
+predictors = [ # predictors in both training and test set
+               	'educ',
+               	'ideo7',
+               	'auth_grid_1',
+               	'auth_grid_3',
+               	'auth_grid_2',
+               	'faminc_new',
+               	'pff_dt',
+               	'abortion',
+               	'immigrant_citizenship',
+               	'immigrant_deport'
+               	]
+
+8.csv 
+Orthogonalization: Basic
+Train, Test: Yougov, ANES
+Target:  pff_dt
+Orth_weights: [0, 0.55, 0.56, … 0.75]
+Neural net: GAIN
+Monte carlo iterations: 50 each
+target = pff_dt  # The target variable in the training set
+predictors = [ # predictors in both training and test set
+               	'educ',
+               	'ideo7',
+               	'auth_grid_1',
+               	'auth_grid_3',
+               	'auth_grid_2',
+               	'faminc_new',
+               	'pff_jb',
+               	'abortion',
+               	'immigrant_citizenship',
+               	'Immigrant_deport'
+		‘white’
+               	]
+
+9.csv
+target = 'abortion'  # The target variable in the training set
+predictors = [ # predictors in both training and test set
+               	'educ',
+               	'ideo7',
+               	'auth_grid_1',
+               	'auth_grid_3',
+               	'auth_grid_2',
+               	'faminc_new',
+               	'pff_jb',
+               	'pff_dt',
+               	'immigrant_citizenship',
+               	'immigrant_deport',
+               	'white'
+               	]
+
+10.csv
+target = 'immigrant_deport'  # The target variable in the training set
+predictors = [ # predictors in both training and test set
+               	'educ',
+               	'ideo7',
+               	'auth_grid_1',
+               	'auth_grid_3',
+               	'auth_grid_2',
+               	'faminc_new',
+               	'pff_jb',
+               	'pff_dt',
+               #	'immigrant_citizenship',
+               	'abortion',
+               	'white'
+               	]
+
+FOR 10NEW:
+	V201141x
+	Remove
+	V201241
+	V201213
+	V201129x
+	V201422
+	V201139
+	V201420x
+
+FOR 9NEW:
+V201410
+Remove
+V201215
+V201415
+V201511x
+V201213
+V201112
+V201206
+V201415
+V201503
+
