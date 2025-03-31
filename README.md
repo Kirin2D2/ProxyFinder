@@ -1,7 +1,11 @@
 # Proxy Finder: Proxy Selection in Divergent Data Sets by Methodological Prediction and Correlation Reduction (MPSA 2025)
 
 This repository contains code for the paper:
-*ProxyFinder: Proxy Selection in Divergent Data Sets by Methodological Prediction and Correlation Reduction*, Kirin Danek, James Daniels, Howard Lavine. 2025.
+*ProxyFinder: Proxy Selection in Divergent Data Sets by Methodological Prediction and Correlation Reduction*, Kirin Danek, James Daniels, Christopher S. Parker, Howard Lavine. 2025.
+
+------
+Code published actively
+------
 
 $$
 \text{Objective function} = \arg \max\limits_{c \in C} \left( (1 - \alpha) R^2_{\hat{t} \sim c} - \alpha \frac{1}{|O|} \sum_{o \in O} R^2_{o \sim c} \right)
